@@ -68,3 +68,50 @@
 10.0.0.5 - [17/Feb/2026:10:50:00] "GET /api/data HTTP/1.1" 500 0 "GuzzleHttp/7" 4000
 45.33.22.11 - [17/Feb/2026:10:51:01] "POST /login HTTP/1.1" 401 120 "Python-requests/2.25" 140
 88.192.10.5 - [17/Feb/2026:10:52:00] "GET /backup.sql HTTP/1.1" 404 220 "Nmap Scripting Engine" 12
+10.0.0.5 - [17/Feb/2026:10:40:00] "GET /api/data HTTP/1.1" 500 0 "GuzzleHttp/7" 4100
+172.16.0.44 - [17/Feb/2026:10:41:05] "GET /account HTTP/1.1" 200 4500 "Mozilla/5.0" 320
+192.168.1.10 - [17/Feb/2026:10:42:15] "GET /settings HTTP/1.1" 200 3200 "Mozilla/5.0" 55
+192.168.1.10 - [17/Feb/2026:10:42:30] "POST /settings/update HTTP/1.1" 200 150 "Mozilla/5.0" 210
+88.192.10.5 - [17/Feb/2026:10:43:00] "GET /core/.env HTTP/1.1" 404 220 "Nmap Scripting Engine" 5
+45.33.22.11 - [17/Feb/2026:10:44:01] "POST /login HTTP/1.1" 401 120 "Python-requests/2.25" 155
+10.0.0.5 - [17/Feb/2026:10:45:00] "GET /api/data HTTP/1.1" 500 0 "GuzzleHttp/7" 3700
+192.168.1.12 - [17/Feb/2026:10:46:10] "GET /sitemap.xml HTTP/1.1" 200 1200 "Mozilla/5.0" 25
+172.16.0.44 - [17/Feb/2026:10:47:00] "GET /support HTTP/1.1" 200 6500 "Mozilla/5.0" 400
+192.168.1.15 - [17/Feb/2026:10:48:20] "GET /images/favicon.ico HTTP/1.1" 200 500 "Mozilla/5.0" 10
+10.0.0.5 - [17/Feb/2026:10:50:00] "GET /api/data HTTP/1.1" 500 0 "GuzzleHttp/7" 4000
+45.33.22.11 - [17/Feb/2026:10:51:01] "POST /login HTTP/1.1" 401 120 "Python-requests/2.25" 140
+88.192.10.5 - [17/Feb/2026:10:52:00] "GET /backup.sql HTTP/1.1" 404 220 "Nmap Scripting Engine" 12
+192.168.1.10 - [17/Feb/2026:10:53:15] "GET /dashboard HTTP/1.1" 200 5200 "Mozilla/5.0" 180
+172.16.0.44 - [17/Feb/2026:10:54:30] "POST /account/update HTTP/1.1" 200 250 "Mozilla/5.0" 320
+10.0.0.6 - [17/Feb/2026:10:55:00] "GET /api/users HTTP/1.1" 200 1800 "GuzzleHttp/7" 210
+192.168.1.11 - [17/Feb/2026:10:56:22] "GET /products HTTP/1.1" 200 8900 "Mozilla/5.0" 340
+45.33.22.11 - [17/Feb/2026:10:57:15] "POST /login HTTP/1.1" 200 450 "Python-requests/2.25" 180
+88.192.10.5 - [17/Feb/2026:10:58:00] "GET /wp-admin HTTP/1.1" 404 220 "Nmap Scripting Engine" 8
+10.0.0.5 - [17/Feb/2026:10:59:00] "GET /api/data HTTP/1.1" 200 3200 "GuzzleHttp/7" 520
+172.16.0.44 - [17/Feb/2026:11:00:10] "GET /billing HTTP/1.1" 200 3400 "Mozilla/5.0" 280
+192.168.1.12 - [17/Feb/2026:11:01:45] "POST /search HTTP/1.1" 200 1200 "Mozilla/5.0" 95
+10.0.0.6 - [17/Feb/2026:11:02:30] "GET /api/products HTTP/1.1" 500 0 "GuzzleHttp/7" 3100
+45.33.22.10 - [17/Feb/2026:11:03:20] "GET /robots.txt HTTP/1.1" 200 350 "curl/7.68.0" 15
+192.168.1.15 - [17/Feb/2026:11:04:05] "GET /css/style.css HTTP/1.1" 200 2400 "Mozilla/5.0" 20
+88.192.10.5 - [17/Feb/2026:11:05:00] "GET /admin/phpinfo.php HTTP/1.1" 404 220 "Nmap Scripting Engine" 9
+10.0.0.5 - [17/Feb/2026:11:06:00] "POST /api/update HTTP/1.1" 201 450 "GuzzleHttp/7" 680
+172.16.0.44 - [17/Feb/2026:11:07:30] "GET /reports HTTP/1.1" 200 7800 "Mozilla/5.0" 520
+192.168.1.10 - [17/Feb/2026:11:08:15] "GET /profile HTTP/1.1" 200 2100 "Mozilla/5.0" 110
+45.33.22.11 - [17/Feb/2026:11:09:00] "POST /api/auth HTTP/1.1" 403 90 "Python-requests/2.25" 95
+10.0.0.6 - [17/Feb/2026:11:10:00] "GET /api/health HTTP/1.1" 200 120 "GuzzleHttp/7" 45
+192.168.1.11 - [17/Feb/2026:11:11:22] "GET /category/electronics HTTP/1.1" 200 6700 "Mozilla/5.0" 410
+88.192.10.5 - [17/Feb/2026:11:12:00] "GET /config.php.bak HTTP/1.1" 404 220 "Nmap Scripting Engine" 11
+172.16.0.44 - [17/Feb/2026:11:13:40] "POST /support/ticket HTTP/1.1" 200 320 "Mozilla/5.0" 340
+10.0.0.5 - [17/Feb/2026:11:14:15] "GET /api/stats HTTP/1.1" 200 2800 "GuzzleHttp/7" 420
+192.168.1.12 - [17/Feb/2026:11:15:30] "GET /contact HTTP/1.1" 200 1800 "Mozilla/5.0" 65
+45.33.22.10 - [17/Feb/2026:11:16:00] "GET /.git/config HTTP/1.1" 404 150 "curl/7.68.0" 18
+10.0.0.6 - [17/Feb/2026:11:17:20] "POST /api/validate HTTP/1.1" 400 220 "GuzzleHttp/7" 90
+192.168.1.15 - [17/Feb/2026:11:18:45] "GET /js/main.js HTTP/1.1" 200 5600 "Mozilla/5.0" 35
+88.192.10.5 - [17/Feb/2026:11:19:00] "GET /phpmyadmin HTTP/1.1" 404 220 "Nmap Scripting Engine" 13
+172.16.0.44 - [17/Feb/2026:11:20:10] "GET /invoices HTTP/1.1" 200 4300 "Mozilla/5.0" 290
+10.0.0.5 - [17/Feb/2026:11:21:00] "DELETE /api/cache HTTP/1.1" 204 0 "GuzzleHttp/7" 560
+192.168.1.10 - [17/Feb/2026:11:22:30] "POST /profile/update HTTP/1.1" 200 180 "Mozilla/5.0" 190
+45.33.22.11 - [17/Feb/2026:11:23:15] "GET /api/public HTTP/1.1" 200 750 "Python-requests/2.25" 120
+10.0.0.6 - [17/Feb/2026:11:24:00] "GET /api/version HTTP/1.1" 200 85 "GuzzleHttp/7" 30
+192.168.1.11 - [17/Feb/2026:11:25:40] "GET /cart HTTP/1.1" 200 1200 "Mozilla/5.0" 70
+88.192.10.5 - [17/Feb/2026:11:26:00] "GET /debug.log HTTP/1.1" 404 220 "Nmap Scripting Engine" 7
