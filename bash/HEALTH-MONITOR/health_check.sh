@@ -6,6 +6,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m'
 
 LOG_FILE="system_stats.log"
+LOG_PATH=$(readlink -f "$LOG_FILE")
 DISK_THRESHOLD=85
 MEM_THRESHOLD=80.0
 CPU_THRESHOLD=2.0
@@ -91,6 +92,8 @@ check_system_load() {
 	echo -e "${YELLOW}3 process that consume the most resources:${NC}"
 
 	ps -eo user,pid,%cpu,%mem --sort=-%mem | head -4
+
+	echo -e "${YELLOW}Log file: $LOG_PATH"
 
 	echo -e "${YELLOW}--------------------------------------${NC}"
 }
