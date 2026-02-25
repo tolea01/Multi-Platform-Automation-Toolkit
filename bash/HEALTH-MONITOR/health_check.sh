@@ -5,6 +5,7 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
+LOG_FILE="system_stats.log"
 DISK_THRESHOLD=85
 MEM_THRESHOLD=80.0
 CPU_THRESHOLD=2.0
@@ -25,8 +26,11 @@ show_help() {
   echo -e "  --help, -h          Show this help message\n"
   echo "Example:"
   echo -e "  $0 --disk 90        Check disk with 90% threshold\n"
+	echo ""
+	exit 0				
+}
 
-	while [[ $# -gt 0 ]]; do
+while [[ $# -gt 0 ]]; do
     case $1 in
         --disk)
             DISK_THRESHOLD="$2"
@@ -46,14 +50,15 @@ show_help() {
         *)
             echo "Error: Unknown option '$1'"
             show_help
+            exit 1
             ;;
     esac
-	done
-					
-}
+done
 
 check_system_load() {
- CPU_LOAD=$(uptime | awk -F 'load average:' '{print $2}' | cut -d, -f1 | xargs)
+	echo -e "${YELLOW}=== System Health Report - $(date) ===${NC}"
+
+	CPU_LOAD=$(uptime | awk -F 'load average:' '{print $2}' | cut -d, -f1 | xargs)
 
 	echo -ne "CPU Load (1 min): $CPU_LOAD"
 
@@ -80,15 +85,15 @@ check_system_load() {
 	if [[ "$DISK_USAGE" -gt "$DISK_THRESHOLD" ]]; then
 		echo -e "[${RED}LOW SPACE${NC}]"
 	else
-		echo -e "[${GREEN}OK${NC}]"
+		echo -e "[${GREEN}OK${NC}]\n"
 	fi
+
+	echo -e "${YELLOW}3 process that consume the most resources:${NC}"
+
+	ps -eo user,pid,%cpu,%mem --sort=-%mem | head -4
+
+	echo -e "${YELLOW}--------------------------------------${NC}"
 }
 
 check_requirements
-show_help
-
-echo -e "${YELLOW}=== System Health Report - $(date) ===${NC}"
-
-check_system_load
-
-echo -e "${YELLOW}--------------------------------------${NC}"
+check_system_load | tee -a $LOG_FILE
