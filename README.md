@@ -1,35 +1,28 @@
-# Unix & Automation Toolkit
+# 🛠️ Multi-Platform Automation Toolkit
 
-A collection of automation scripts designed for system administration, data processing, and task automation.
-
-This repository includes practical examples written in:
-
-- AWK
-- Bash
-- PowerShell
+A comprehensive collection of scripts for Linux (Bash, AWK) and Windows (PowerShell) environments.
 
 ---
 
-## 📂 Project Structure
-awk/
+## 🚀 Featured Tools & Demos
+
+### 🐧 Linux Automation (Bash)
+**System Health Monitor**
+Monitor CPU, RAM, and Disk usage with real-time visual alerts.
+![System Health Demo](bash/HEALTH-MONITOR/demo.gif)
+
+### 📊 Data Processing (AWK)
+**Log Parser**
+Efficiently analyze massive server logs to extract security insights.
+
+### 🪟 Windows Automation (PowerShell)
+**User Auditor**
+Automated reporting for local or Active Directory user accounts.
 
 ---
 
-## 📜 Scripts Overview
+## 📂 Navigation
 
-### 🔹 AWK Scripts
-
-Located in the `awk/` directory.
-
-These scripts are used for:
-
-- Processing CSV files
-- Generating HR reports
-- Analyzing log files
-- Extracting and filtering structured data
-
-Example scripts:
-- `HR-report/` → Scripts for employee data analysis
-- `LOGS/` → Scripts for log file processing
-
----
+- [Bash Scripts](./bash) - Linux system administration.
+- [AWK Utilities](./awk) - Advanced text & log processing.
+- [PowerShell](./powershell) - Windows automation & management.
