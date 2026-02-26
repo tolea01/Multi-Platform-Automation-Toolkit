@@ -14,6 +14,11 @@ Monitor CPU, RAM, and Disk usage with real-time visual alerts.
 ### 📊 Data Processing (AWK)
 **Log Parser**
 Efficiently analyze massive server logs to extract security insights.
+![Log Parser Demo](awk/LOGS/demo.gif)
+
+**HR Report**
+Tool for generating comprehensive HR reports from employee CSV data.
+![HR Report Demo](awk/HR-report/demo.gif)
 
 ### 🪟 Windows Automation (PowerShell)
 **User Auditor**
