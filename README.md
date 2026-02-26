@@ -9,7 +9,7 @@ A comprehensive collection of scripts for Linux (Bash, AWK) and Windows (PowerSh
 ### 🐧 Linux Automation (Bash)
 **System Health Monitor**
 Monitor CPU, RAM, and Disk usage with real-time visual alerts.
-![System Health Demo](bash/HEALTH-MONITOR/demo.gif)
+![System Health Demo](bash/HEALTH-MONITOR/demo.svg)
 
 ### 📊 Data Processing (AWK)
 **Log Parser**
