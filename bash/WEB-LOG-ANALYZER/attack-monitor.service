@@ -1,9 +1,11 @@
 [Unit]
 Description=Web Attack Monitor
+After=network.target
 
 [Service]
 ExecStart=/home/user/git_repo/Multi-Platform-Automation-Toolkit/bash/WEB-LOG-ANALYZER/serntinel.sh
 Restart=always
+RestartSec=1200
 User=root
 
 [Install]
