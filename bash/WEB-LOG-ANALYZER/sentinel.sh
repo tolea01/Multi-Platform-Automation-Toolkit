@@ -50,6 +50,13 @@ send_alert_message() {
 }
 
 log_parser_handler() {
+	local awk_script_output=$("$AWK_SCRIPT" "$LOG_FILE")
+
+	if [ -z "$awk_script_output" ]; then
+		echo "There are no attacks"
+		return 0
+	fi
+
 	while read -r line; do
 		local type_attack=$(echo "$line" | awk -F ':' '{print $1}')
 		local ip=$(echo "$line" | awk -F ':' '{split($2, ip, " "); print ip[1]}')
@@ -62,7 +69,7 @@ log_parser_handler() {
 
 		send_alert_message "$msg"
 
-	done < <("$AWK_SCRIPT" "$LOG_FILE")
+	done <<< "$awk_script_output"
 }
 
 log_parser_handler

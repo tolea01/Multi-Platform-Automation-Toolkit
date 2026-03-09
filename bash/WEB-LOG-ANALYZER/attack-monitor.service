@@ -3,7 +3,8 @@ Description=Web Attack Monitor
 After=network.target
 
 [Service]
-ExecStart=/home/user/git_repo/Multi-Platform-Automation-Toolkit/bash/WEB-LOG-ANALYZER/serntinel.sh
+WorkingDirectory=/home/user/git_repo/Multi-Platform-Automation-Toolkit/bash/WEB-LOG-ANALYZER/
+ExecStart=/home/user/git_repo/Multi-Platform-Automation-Toolkit/bash/WEB-LOG-ANALYZER/sentinel.sh
 Restart=always
 RestartSec=1200
 User=root
