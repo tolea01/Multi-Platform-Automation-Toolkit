@@ -11,6 +11,10 @@ A comprehensive collection of scripts for Linux (Bash, AWK) and Windows (PowerSh
 Monitor CPU, RAM, and Disk usage with real-time visual alerts.
 ![System Health Demo](bash/HEALTH-MONITOR/demo.gif)
 
+**Security monitoring tool**
+that analyzes web server logs to detect common web attacks and sends real-time alerts to Discord.
+<video src="bash/WEB-LOG-ANALYZER/demo.mp4" autoplay loop muted playsinline width="100%"></video>
+
 ### 📊 Data Processing (AWK)
 **Log Parser**
 Efficiently analyze massive server logs to extract security insights.
