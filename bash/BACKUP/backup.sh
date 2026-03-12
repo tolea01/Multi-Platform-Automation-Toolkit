@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USE_DEFAULT=true
-BACKUP_SOURCES=("/backup_archive.bz2" "/backup_file.txt" "/backup_folder")
+BACKUP_SOURCES=("./backup_archive.bz2" "./backup_file.txt" "./backup_folder")
 REMOTE="gdrive"
 FILES=()
 
@@ -67,7 +67,7 @@ archive_files() {
     archive_name="$(pwd)/backup_${timestamp}.tar.gz"
 
     if check_backup_sorce "${files[@]}"; then
-        if tar -czvf "$archive_name" "${files[@]}" 2>/dev/null; then
+        if tar -czf "$archive_name" "${files[@]}" 2>/dev/null; then
             echo "$archive_name"
         else
             echo "Error: Failed to create archive." >&2
@@ -96,16 +96,16 @@ convert_to_bytes() {
 }
 
 upload_to_drive() {
-    local file="$1"
+    local files=("$@")
 
     local gdrive_free_space
-    gdrive_free_space=$(rclone about "$REMOTE": | awk 'NR==3 {print $2 $3}')
+    gdrive_free_space=$(rclone about "$REMOTE": --json | grep free | grep -o '[0-9]*')
 
     local files_size
-    files_size=$(du -h "$file" | awk '{print $1}')
+    files_size=$(du -cb "${files[@]}" | awk '/total/ {print $1}')
 
-    if (( $(convert_to_bytes "$gdrive_free_space") > $(convert_to_bytes "$files_size") )); then
-        rclone copy "$file" "$REMOTE:backup_folder"
+    if (( files_size < gdrive_free_space )); then
+        rclone copy "${files[@]}" "$REMOTE:backup_folder"
         echo "Backup done!"
     else
         echo "Error: Files can't be uploaded" >&2
