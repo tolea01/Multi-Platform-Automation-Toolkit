@@ -1,5 +1,17 @@
 #!/bin/bash
 
+show_help() {
+    echo "Usage: $0 [OPTIONS]"
+    echo "Options:"
+    echo "-f    Files to upload (default files are included in the script)"
+    echo "-r    Rclone remote (default is gdrive)"
+    echo -e "  --help, -h          Show this help message\n"
+    echo "Example:"
+    echo -e "  $0 -f ./file1 ./file2 -r gdrive        Upload file1, file2 to gdrive rclone remote"
+	echo ""
+    exit 0
+}
+
 USE_DEFAULT=true
 BACKUP_SOURCES=("./backup_archive.bz2" "./backup_file.txt" "./backup_folder")
 REMOTE="gdrive"
@@ -26,6 +38,7 @@ while [[ $# -gt 0 ]]; do
         ;;
         -h|--help)
             show_help
+            shift
         ;;
         *)
             echo "Unknown option: $1"
@@ -34,18 +47,6 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
-
-show_help() {
-    echo "Usage: $0 [OPTIONS]"
-    echo "Options:"
-    echo "-f    Files to upload (default files are included in the script)"
-    echo "-r    Rclone remote (default is gdrive)"
-    echo -e "  --help, -h          Show this help message\n"
-    echo "Example:"
-    echo -e "  $0 -f ./file1 ./file2 -r gdrive        Upload file1, file2 to gdrive rclone remote"
-	echo ""
-    exit 0
-}
 
 check_backup_sorce() {
     local backup_sources=("$@")
